@@ -1,6 +1,6 @@
-diff -rupN drm-master/data/amdgpu.ids libdrm-git/data/amdgpu.ids
---- drm-master/data/amdgpu.ids	2020-05-27 23:16:28.000000000 +0200
-+++ libdrm-git/data/amdgpu.ids	2020-06-01 09:56:14.506767800 +0200
+diff -Naur libdrm/data/amdgpu.ids patched-libdrm/data/amdgpu.ids
+--- libdrm/data/amdgpu.ids	2020-07-18 12:39:58.000000000 +0200
++++ patched-libdrm/data/amdgpu.ids	2020-07-18 17:08:11.624580200 +0200
 @@ -221,3 +221,7 @@
  9874,	84,	AMD Radeon R7 Graphics
  6FDF,	E7,	AMD Radeon RX 590 GME
@@ -9,10 +9,10 @@ diff -rupN drm-master/data/amdgpu.ids libdrm-git/data/amdgpu.ids
 +9922,	00, AMD Liverpool (PlayStation 4)
 +9923,	00, AMD Liverpool (PlayStation 4)
 +9924,	11, AMD Gladius (PlayStation 4)
-diff -rupN drm-master/radeon/r600_pci_ids.h libdrm-git/radeon/r600_pci_ids.h
---- drm-master/radeon/r600_pci_ids.h	2020-05-27 23:16:28.000000000 +0200
-+++ libdrm-git/radeon/r600_pci_ids.h	2020-06-01 09:56:58.537392700 +0200
-@@ -473,6 +473,11 @@ CHIPSET(0x131B, KAVERI_131B, KAVERI)
+diff -Naur libdrm/radeon/r600_pci_ids.h patched-libdrm/radeon/r600_pci_ids.h
+--- libdrm/radeon/r600_pci_ids.h	2020-07-18 12:39:59.000000000 +0200
++++ patched-libdrm/radeon/r600_pci_ids.h	2020-07-18 17:08:50.942097500 +0200
+@@ -473,6 +473,11 @@
  CHIPSET(0x131C, KAVERI_131C, KAVERI)
  CHIPSET(0x131D, KAVERI_131D, KAVERI)
  
@@ -24,10 +24,10 @@ diff -rupN drm-master/radeon/r600_pci_ids.h libdrm-git/radeon/r600_pci_ids.h
  CHIPSET(0x67A0, HAWAII_67A0, HAWAII)
  CHIPSET(0x67A1, HAWAII_67A1, HAWAII)
  CHIPSET(0x67A2, HAWAII_67A2, HAWAII)
-diff -rupN drm-master/radeon/radeon_surface.c libdrm-git/radeon/radeon_surface.c
---- drm-master/radeon/radeon_surface.c	2020-05-27 23:16:28.000000000 +0200
-+++ libdrm-git/radeon/radeon_surface.c	2020-06-01 09:57:30.996933600 +0200
-@@ -86,6 +86,8 @@ enum radeon_family {
+diff -Naur libdrm/radeon/radeon_surface.c patched-libdrm/radeon/radeon_surface.c
+--- libdrm/radeon/radeon_surface.c	2020-07-18 12:39:59.000000000 +0200
++++ patched-libdrm/radeon/radeon_surface.c	2020-07-18 17:09:24.585852100 +0200
+@@ -86,6 +86,8 @@
      CHIP_HAINAN,
      CHIP_BONAIRE,
      CHIP_KAVERI,
