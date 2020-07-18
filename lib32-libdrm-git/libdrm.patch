@@ -35,4 +35,4 @@ diff -Naur libdrm/radeon/radeon_surface.c patched-libdrm/radeon/radeon_surface.c
 +    CHIP_GLADIUS,
      CHIP_KABINI,
      CHIP_HAWAII,
-     CHIP_MULLINS,
+     CHIP_MULLINS
