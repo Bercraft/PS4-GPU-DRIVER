@@ -45,39 +45,7 @@ sha512sums=('SKIP'
 # 4  llvm (stable from extra) Default value
 # 
 
-if [[ ! $MESA_WHICH_LLVM ]] ; then
-    MESA_WHICH_LLVM=4
-fi
 
-case $MESA_WHICH_LLVM in
-    1)
-        # aur llvm-minimal-git
-        makedepends+=('llvm-minimal-git')
-        depends+=('llvm-libs-minimal-git')
-        optdepends+=('llvm-minimal-git: opencl')
-        ;;
-    2)
-        # aur llvm-git
-        # depending on aur-llvm-* to avoid mixup with LH llvm-git
-        makedepends+=('aur-llvm-git')
-        depends+=('aur-llvm-libs-git')
-        optdepends+=('llvm-git: opencl')
-        ;;
-    3)
-        # mesa-git/llvm-git (lordheavy unofficial repo)
-        makedepends+=('llvm-git' 'clang-git')
-        depends+=('llvm-libs-git')
-        optdepends+=('clang-git: opencl' 'compiler-rt: opencl')
-        ;;
-    4)
-        # extra/llvm
-        makedepends+=(llvm=10.0.0 clang=10.0.0)
-        depends+=(llvm-libs=10.0.0)
-        optdepends+=('clang: opencl' 'compiler-rt: opencl')
-        ;;
-    *)
-esac
-        
         
 prepare() {
   patch -s -p0 < ../mesa.patch
