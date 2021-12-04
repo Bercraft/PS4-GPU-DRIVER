@@ -5,7 +5,7 @@ Updated on 01/12/2021
 
 Patches are in patches
 
-Driver to compile are inisde Compile
+Driver to compile are inside Compile
 
 ps4-video-drivers
 
