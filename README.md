@@ -11,7 +11,9 @@ ps4-video-drivers
 
 Video drivers required to use 3d hardware acceleration on Arch Linux. Original patches from failoverflow: https://github.com/fail0verflow/ps4-radeon-patches
 
-We just set up a repository where you can get pre-patched video drivers for ps4
+and   Ps3itaTeam   https://github.com/Ps3itaTeam/ps4linux-video-drivers
+
+Just set up a repository where you can get pre-patched video drivers for ps4
 
     Add the repository to /etc/pacman.conf
     
