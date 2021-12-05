@@ -1,7 +1,7 @@
+# FOR PERSONAL USE, USE AT YOUR OWN RISK!!!
+
 # PS4-GPU-DRIVER
 Modified drivers for ps4 gpu
-
-Updated on 01/12/2021
 
 Patches are in patches
 
