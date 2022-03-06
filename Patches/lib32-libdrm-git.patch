@@ -1,0 +1,35 @@
+diff -Naur /lib32-libdrm-git/src/libdrm/data/amdgpu.ids /lib32-libdrm-git-patch/src/libdrm/data/amdgpu.ids
+--- /lib32-libdrm-git/src/libdrm/data/amdgpu.ids	2022-01-09 19:38:07.491437000 +0100
++++ /lib32-libdrm-git-patch/src/libdrm/data/amdgpu.ids	2022-01-09 20:01:15.705594000 +0100
+@@ -298,3 +298,6 @@
+ 9874,	84,	AMD Radeon R7 Graphics
+ 6FDF,	E7,	AMD Radeon RX 590 GME
+ 6FDF,	EF,	AMD Radeon RX 580 2048SP
++9920,	00, AMD Liverpool (PlayStation 4)
++9922,	00, AMD Liverpool (PlayStation 4)
++9923,	00, AMD Liverpool (PlayStation 4)
+diff -Naur /lib32-libdrm-git/src/libdrm/radeon/r600_pci_ids.h /lib32-libdrm-git-patch/src/libdrm/radeon/r600_pci_ids.h
+--- /lib32-libdrm-git/src/libdrm/radeon/r600_pci_ids.h	2022-01-09 19:38:07.504771000 +0100
++++ /lib32-libdrm-git-patch/src/libdrm/radeon/r600_pci_ids.h	2022-01-09 20:02:10.825794000 +0100
+@@ -473,6 +473,10 @@
+ CHIPSET(0x131C, KAVERI_131C, KAVERI)
+ CHIPSET(0x131D, KAVERI_131D, KAVERI)
+ 
++CHIPSET(0x9920, LIVERPOOL_9920, LIVERPOOL)
++CHIPSET(0x9922, LIVERPOOL_9922, LIVERPOOL)
++CHIPSET(0x9923, LIVERPOOL_9923, LIVERPOOL)
++
+ CHIPSET(0x67A0, HAWAII_67A0, HAWAII)
+ CHIPSET(0x67A1, HAWAII_67A1, HAWAII)
+ CHIPSET(0x67A2, HAWAII_67A2, HAWAII)
+diff -Naur /lib32-libdrm-git/src/libdrm/radeon/radeon_surface.c /lib32-libdrm-git-patch/src/libdrm/radeon/radeon_surface.c
+--- /lib32-libdrm-git/src/libdrm/radeon/radeon_surface.c	2022-01-09 19:38:07.504771000 +0100
++++ /lib32-libdrm-git-patch/src/libdrm/radeon/radeon_surface.c	2022-01-09 20:02:48.305930000 +0100
+@@ -86,6 +86,7 @@
+     CHIP_HAINAN,
+     CHIP_BONAIRE,
+     CHIP_KAVERI,
++    CHIP_LIVERPOOL,
+     CHIP_KABINI,
+     CHIP_HAWAII,
+     CHIP_MULLINS,

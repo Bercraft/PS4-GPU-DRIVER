@@ -1,0 +1,8 @@
+Command : diff -Naur target.rb.original target.rb > my_awesome_change.patch
+From : https://docs.gitlab.com/omnibus/development/creating-patches.html
+
+Command : makepkg -g >> PKGBUILD
+From : https://wiki.archlinux.org/title/Patching_packages
+
+Git LFS 
+From : https://git-lfs.github.com/

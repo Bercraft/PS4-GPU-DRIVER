@@ -1,0 +1,18 @@
+Bare skeleton of a source file indicating where to add your patch
+
+
+
+# add you patch file here 
+source=('file source'
+        
+        'mesa-git.patch'        <--------------------------------------------------------------
+)
+
+prepare() {
+    
+
+    # Applying PS4 patch
+    
+    patch --verbose --forward --strip=3 --input="mesa-git.patch"         
+
+}
